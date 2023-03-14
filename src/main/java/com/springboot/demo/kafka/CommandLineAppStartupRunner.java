@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 import com.springboot.demo.kafka.producers.KafkaStringProducer;
 
+
 @Component
 public class CommandLineAppStartupRunner implements CommandLineRunner {
 
