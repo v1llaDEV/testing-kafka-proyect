@@ -13,14 +13,14 @@ public class KafkaUserProducer {
 
 	private static final Logger log = LoggerFactory.getLogger(KafkaStringProducer.class);
 
-	private final KafkaTemplate<String, Object> kafkaTemplate;
+	private final KafkaTemplate<String, User> kafkaUserTemplate;
 
-	public KafkaUserProducer(@Qualifier("kafkaTemplate")KafkaTemplate<String, Object> kafkaTemplate) {
-		this.kafkaTemplate = kafkaTemplate;
+	public KafkaUserProducer(@Qualifier("kafkaUserTemplate")KafkaTemplate<String, User> kafkaUserTemplate) {
+		this.kafkaUserTemplate = kafkaUserTemplate;
 	}
 
 	public void sendMessage(User user) {
 		log.info("Producing USER message: {}", user);
-		this.kafkaTemplate.send("TOPIC-USER-DEMO", user);
+		this.kafkaUserTemplate.send("TOPIC-USER-DEMO", user);
 	}
 }
