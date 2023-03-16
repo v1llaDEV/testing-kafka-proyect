@@ -10,8 +10,8 @@ public class KafkaStringConsumer {
 
 	private static final Logger log = LoggerFactory.getLogger(KafkaStringConsumer.class);
 	
-	@KafkaListener(topics = "TOPIC-DEMO", groupId="groupd_id")
+	@KafkaListener(topics = "TOPIC-STRING-DEMO", groupId="groupd_id")
 	public void consume(String message) {
-		log.info("Consuming message: {}", message);
+		log.info("Consuming message of type String: {}", message);
 	}
 }
