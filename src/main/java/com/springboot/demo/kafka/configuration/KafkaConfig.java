@@ -19,7 +19,7 @@ import com.springboot.demo.kafka.entities.User;
 
 
 @Configuration
-public class KafkaStringConfig {
+public class KafkaConfig {
 
 	public ProducerFactory<String, String> producerStringFactory(){
 		Map<String, Object> config = new HashMap<>();
